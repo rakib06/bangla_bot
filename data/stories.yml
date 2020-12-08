@@ -2,12 +2,37 @@ version: "2.0"
 
 stories:
 
-- story: happy path
+- story: search hospital happy path 
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
+  - intent: search_provider{"facility_type": "হাসপাতাল", "location":"মিরপুর"}
+  - action: facility_search
+  - action: utter_goodbye
+
+- story: search hospital + location happy path 
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: search_provider{"facility_type": "হাসপাতাল"}
+  - action: utter_ask_location
+  - action: inform{"location": "মিরপুর"}
+  - action: facility_search
+  - action: utter_goodbye
+
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
   - action: utter_happy
+
+
+
 
 - story: sad path 1
   steps:
