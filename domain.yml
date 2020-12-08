@@ -1,0 +1,27 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- inform
+- search_provider
+responses:
+  utter_greet:
+  - text: 'আরে ভাই! কেমন আছেন? '
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'আপনার মন ভাল করার জন্য ছোট প্রচেষ্টা :'
+  utter_did_that_help:
+  - text: এখন কি ভাল লাগছে?
+  utter_happy:
+  - text: 'জোস, চালায়ে যান  '
+  utter_goodbye:
+  - text: বিদায়
+  utter_iamabot:
+  - text: 'আমি বাংলা বট '

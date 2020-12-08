@@ -1,0 +1,84 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - হেই 
+    - হ্যালো
+    - হাই
+    - শুভ সকাল
+    - শুভ অপরানহ 
+    - হ্যালো ভাই 
+    - আছেন? 
+
+
+- intent: inform
+  examples: |
+    - [মিরপুর] (location)
+    - [উত্তরা] (location)
+    - [ধানমন্ডি] (location)
+    - [গুলশান] (location)
+
+
+- intent: search_provider
+  examples: |
+    - আমার আশেপাশের [হাসপাতাল] (facility_type) দেখতে চাই
+    - কাছাকাছি [হাসপাতাল] (facility_type) দরকার 
+    - নিকটবর্তী ভাল [হাসপাতাল] (facility_type) প্রয়োজন  
+    - [মিরপুরের] (location) ভাল হাসপাতাল (facility_type) কোনটি 
+
+
+
+- intent: goodbye
+  examples: |
+    - শুভ রাত্রি
+    - শুভ বিদায়
+    - গুড বাই 
+    - আবার দেখা হবে
+    - বাই
+
+
+- intent: affirm
+  examples: |
+    - হ্যা 
+    - ইয়েস 
+    - হা 
+    - অবশ্যই 
+    - রাইট 
+
+
+- intent: deny
+  examples: |
+    - না 
+    - নাহ
+    - কখনই না 
+    - আমি এভাবে ভাবি নাই 
+    - আমার এটা পছন্দ হল না 
+    - কোন উপায় নাই 
+    - আসলে না 
+
+- intent: mood_great
+  examples: |
+    - পারফেক্ট 
+    - গ্রেট 
+    - জোস 
+    - অসাধারণ 
+    - ভাল লাগলো 
+    - ভাল বলেছেন 
+    - খুবই ভাল 
+
+- intent: mood_unhappy
+  examples: |
+    - খারাপ লাগছে 
+    - মন ভাল না 
+    - মেজাজটা খারাপ 
+    - বিষণ্ণ মনটা 
+    - ভাল নেই 
+
+- intent: bot_challenge
+  examples: |
+    - কে ভাই তুমি? 
+    - কে আপনি ?
+    - আপনি কি মানুষ ?
+    - আপনি কি রোবট ?
